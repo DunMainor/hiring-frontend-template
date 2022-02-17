@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"baseUrl": ".",
+		"module": "esnext",
+		"jsx": "react-native",
+            "allowJs": true,
+            "checkJs": false,
+            "moduleResolution": "node",
+		"paths": {
+                  "@*": ["src/*"],
+                  "@assets": ["src/assets"],
+                  "@common": ["src/common"],
+                  "@pages": ["src/app/pages"],
+                  "@components": ["src/app/components"],
+                  "@actioncreators": ["src/redux/actioncreators"],
+                  "@reducers": ["src/redux/reducers"],
+                  "@services": ["src/services"]
+		}
+	},
+}

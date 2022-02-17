@@ -1,8 +1,25 @@
 {
-  "parser": "babel-eslint",
-  "plugins": [
-    "react-hooks"
-  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": { "sourceType": "module","ecmaFeatures": { "jsx": true}, "babelOptions": { "configFile": "./babel.config.js" }},
+  "root": true,
+  "extends": [ "plugin:react-native/all" ],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@assets", "./src/assets"],
+          ["@common", "./src/common"],
+          ["@pages", "./src/app/pages"],
+          ["@components", "./src/app/components"],
+          ["@actioncreators", "./src/redux/actioncreators"],
+          ["@reducers", "./src/redux/reducers"],
+          ["@services", "./src/services"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "plugins": ["import", "react", "react-hooks", "react-native"],
   "rules": {
     "no-console": "error",
     "react-hooks/rules-of-hooks": "error",
